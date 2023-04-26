@@ -1,0 +1,130 @@
+.is-no-scroll {
+  overflow: hidden;
+}
+
+.l-header {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+.l-header__inner {
+  height: 8rem;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s;
+}
+.l-header__hamburger {
+  position: fixed;
+  right: 2rem;
+  width: 30px;
+  height: 20px;
+  z-index: 1000;
+}
+.l-header__hamburger-line {
+  display: block;
+  background-color: #333;
+  width: 100%;
+  height: 2px;
+  transition: all 0.3s;
+  position: absolute;
+}
+.l-header__hamburger-line:nth-of-type(1) {
+  top: 0;
+}
+.l-header__hamburger-line:nth-of-type(2) {
+  top: calc(50% - 1px);
+}
+.l-header__hamburger-line:nth-last-of-type(1) {
+  bottom: 0;
+}
+.l-header__hamburger-line.is-cross:nth-of-type(1) {
+  transform: translateY(9px) rotate(-135deg);
+}
+.l-header__hamburger-line.is-cross:nth-of-type(2) {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.l-header__hamburger-line.is-cross:nth-last-of-type(1) {
+  transform: translateY(-9px) rotate(135deg);
+}
+.l-header__nav {
+  display: none;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+}
+.l-header__nav.is-open {
+  display: block !important;
+}
+.l-header__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.l-header__nav-item {
+  text-align: center;
+  transition: all 0.3s;
+}
+.l-header__nav-item::after {
+  content: "";
+  display: block;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: all 0.3s;
+  border-bottom: 1px solid #08ceff;
+}
+.l-header__nav-item:hover {
+  color: #08ceff;
+}
+.l-header__nav-item:hover::after {
+  transform: scale(1, 1);
+}
+
+@media (min-width: 37.5rem) {
+  .l-header__nav-item {
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 58.75rem) {
+  .l-header__inner {
+    height: 10rem;
+    padding: 0 5rem;
+  }
+  .l-header__hamburger {
+    display: none;
+  }
+  .l-header__hamburger-line {
+    display: none;
+  }
+  .l-header__nav {
+    display: block;
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    position: inherit;
+    transform: none;
+  }
+  .l-header__nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    position: inherit;
+    transform: none;
+  }
+}
+/*# sourceMappingURL=_header.css.map */

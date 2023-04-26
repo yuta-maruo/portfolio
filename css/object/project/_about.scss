@@ -1,0 +1,229 @@
+@use '../../foundation/color' as *;
+
+.p-about-fv{
+    &__inner{
+        margin-top: 8rem;
+        padding: 3rem 2rem;
+        color: $dark-blue;
+        background-color: $blue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__title{
+        font-size: 2.4rem;
+    }
+}
+.p-about-intro{
+    &__inner{
+        padding: 6rem 0;
+    }
+    &__title{
+        margin-bottom: 5em;
+        &::before{
+            content: 'PROFILE';
+        }
+    }
+    &__img-box{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 8rem;
+        position: relative;
+        &::before{
+            content: '';
+            width: 50%;
+            height: 65%;
+            background-color: $dark-blue;
+            position: absolute;
+            top: -4rem;
+            left: 0;
+            z-index: -1;
+        }
+        &::after{
+            content: '';
+            width: 50%;
+            height: 65%;
+            background-color: $blue;
+            position: absolute;
+            bottom: -4rem;
+            z-index: -1;
+            right: 0;
+        }
+    }
+    &__img{
+        width: 75%;
+    }
+    &__name{
+        font-size: 2.2rem;
+        margin-bottom: .3em;
+    }
+    &__name-under{
+        display: block;
+        font-size: 1.4rem;
+        border-bottom: 3px solid $dark-blue;
+        margin-bottom: 1.2em;
+    }
+    &__intro-title{
+        font-size: 1.8rem;
+        margin-bottom: .5rem;
+    }
+    &__text{
+        margin-bottom: 1.25em;
+    }
+}
+.p-about-skill{
+    &__inner{
+        padding-bottom: 6rem;
+    }
+    &__title{
+        margin-bottom: 2em;
+        &::before{
+            content: 'SKILLS';
+        }
+    }
+    &__lists{
+        display: grid;
+    }
+    &__item{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 5fr;
+        gap: 1rem;
+        padding: 1.5rem 0;
+        border-bottom: 1px dashed $black;
+        &:nth-of-type(1){
+            border-top: 1px dashed $black;
+        }
+    }
+    &__font-awesome{
+        display: flex !important; // importantがないと Fontawesomeで勝手につくclassでかき消される
+        justify-content: center;
+        font-size: 4rem;
+    }
+    &__name{
+        margin-bottom: .3em;
+    }
+    &__text{
+        font-size: 1.4rem;
+    }
+}
+@media(min-width: 37.5rem){
+    .p-about-fv{
+        &__sub-title{
+            font-size: 2rem;
+        }
+        &__title{
+            font-size: 2.8rem;
+        }
+    }
+    .p-about-intro{
+        &__inner{
+            padding: 10rem 0;
+        }
+        &__img-box{
+            width: 80%;
+            margin: 0 auto 10rem;
+            &::before{
+                top: -8rem;
+            }
+            &::after{
+                bottom: -8rem;
+            }
+        }
+        &__name{
+            font-size: 2.4rem;
+        }
+        &__name-under{
+            font-size: 1.6rem;
+        }
+        &__intro-title{
+            font-size: 2rem;
+        }
+        &__text{
+            font-size: 1.8rem;
+        }
+    }
+    .p-about-skill{
+        &__inner{
+            padding-bottom: 10rem;
+        }
+        &__title{
+            margin-bottom: 2.5em;
+        }
+        &__item{
+            padding: 2rem 0;
+        }
+        &__font-awesome{
+            font-size: 6rem;
+        }
+        &__name{
+            font-size: 2rem;
+        }
+        &__text{
+            font-size: 1.8rem;
+        }
+    }   
+}
+@media(min-width: 58.75rem){
+    .p-about-fv{
+        &__inner{
+            margin-top: 10rem;
+            padding: 3rem 5rem;
+        }
+        &__title{
+            font-size: 3.2rem;
+        }
+    }
+    .p-about-intro{
+        &__inner{
+            padding: 12rem 3rem 16rem;
+        }
+        &__img-box{
+            margin-bottom: 14rem;
+        }
+        &__img{
+            max-height: 600px;
+            height: 60rem;
+            width: auto;
+        }
+        &__name{
+            font-size: 2.8rem;
+            margin-bottom: .3em;
+        }
+        &__name-under{
+            font-size: 2rem;
+            padding-bottom: .3em;
+        }
+        &__intro-title{
+            font-size: 2.4rem;
+        }
+        &__text{
+            margin-bottom: 1.5em;
+        }
+    }
+    .p-about-skill{
+        &__inner{
+            padding-bottom: 14rem;
+        }
+        &__title{
+            margin-bottom: 3em;
+        }
+        &__lists{
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 30px;
+        }
+        &__item{
+            grid-template-columns: 1fr 4fr;
+            padding: 2rem 0;
+            &:nth-of-type(2){
+                border-top: 1px dashed $black;
+            }
+        }
+        &__name{
+            font-size: 2.4rem;
+        }
+        &__text{
+            font-size: 2rem;
+        }
+    }
+}

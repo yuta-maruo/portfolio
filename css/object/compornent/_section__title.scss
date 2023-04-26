@@ -1,0 +1,36 @@
+@use '../../foundation/color' as *;
+
+.c-section__title{
+    font-size: 2rem;
+    letter-spacing: .3em;
+    text-align: center;
+    position: relative;
+    &::before{
+        // content: ''; を各projectのtitle::before{} にて設定
+        font-size: 4rem;
+        letter-spacing: .3em;
+        opacity: .8;
+        color: $blue;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -55%);
+        z-index: -1;
+    }
+}
+@media (min-width: 37.5rem){
+    .c-section__title{
+        font-size: 3rem;
+        &::before{
+            font-size: 6rem;
+        }
+    }
+}
+@media(min-width: 58.75rem){
+    .c-section__title{
+        font-size: 3.6rem;
+        &::before{
+            font-size: 7rem;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+@use '../../foundation/color' as *;
+
+.p-contact-fv{
+    &__inner{
+        margin-top: 8rem;
+        padding: 3rem 2rem;
+        color: $dark-blue;
+        background-color: $blue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__title{
+        font-size: 2.4rem;
+    }
+}
+.p-contact{
+    &__inner{
+        padding: 6rem 0;
+    }
+    &__title{
+        margin-bottom: 2em;
+        &::before{
+            content: 'Contact';
+        }
+    }
+    &__text{
+        &--red{
+            font-size: 1.4rem;
+            color: $red;
+        }
+    }
+    &__attention{
+        font-size: 2rem;
+    }
+}
+@media(min-width: 37.5rem){
+    .p-contact-fv{
+        &__sub-title{
+            font-size: 2rem;
+        }
+        &__title{
+            font-size: 2.8rem;
+        }
+    }
+    .p-contact{
+        &__inner{
+            padding: 10rem 0;
+        }
+        &__text{
+            font-size: 2rem;
+            text-align: center;
+            &--red{
+                font-size: 1.6rem;
+            }
+        }
+    }   
+}
+@media(min-width: 58.75rem){
+    .p-contact-fv{
+        &__inner{
+            margin-top: 10rem;
+            padding: 3rem 5rem;
+        }
+        &__title{
+            font-size: 3.2rem;
+        }
+    }
+    .p-contact{
+        &__inner{
+            padding: 12rem 3rem 10rem;
+        }
+        &__title{
+            margin-bottom: 1.5em;
+        }
+    }
+}

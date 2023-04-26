@@ -1,0 +1,127 @@
+.p-singular-fv__inner {
+  margin-top: 8rem;
+  padding: 3rem 2rem;
+  color: #08ceff;
+  background-color: #d7f7ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.p-singular-fv__title {
+  font-size: 2.4rem;
+}
+
+.p-singular-work__inner {
+  padding: 5rem 0;
+}
+.p-singular-work__item {
+  display: flex;
+  flex-direction: column;
+}
+.p-singular-work__img-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 5rem;
+}
+.p-singular-work__img {
+  width: 80%;
+  margin: auto;
+}
+.p-singular-work__title {
+  font-size: 2.2rem;
+  line-height: 1.8;
+}
+.p-singular-work__title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background-color: #08ceff;
+}
+.p-singular-work__content-link {
+  font-size: 1.4rem;
+  color: #08ceff;
+  text-decoration: underline;
+  margin-bottom: 1em;
+}
+.p-singular-work__content-password {
+  font-size: 1.4rem;
+}
+.p-singular-work__content-title {
+  font-size: 1.8rem;
+  margin: 1.5em 0 0.2em;
+}
+.p-singular-work__content-text {
+  padding-bottom: 2em;
+  border-bottom: 1px solid #dadada;
+}
+
+@media (min-width: 37.5rem) {
+  .p-singular-fv__sub-title {
+    font-size: 2rem;
+  }
+  .p-singular-fv__title {
+    font-size: 2.8rem;
+  }
+  .p-singular-work__inner {
+    padding: 10rem 0 18rem;
+  }
+  .p-singular-work__img-box {
+    margin: 0 auto 8rem;
+  }
+  .p-singular-work__img {
+    width: 70%;
+  }
+  .p-singular-work__title {
+    font-size: 2.8rem;
+  }
+  .p-singular-work__title::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    background-color: #08ceff;
+  }
+  .p-singular-work__content-link {
+    font-size: 1.8rem;
+  }
+  .p-singular-work__content-password {
+    font-size: 1.6rem;
+  }
+  .p-singular-work__content-title {
+    font-size: 2rem;
+    margin: 1.5em 0 0.3em;
+  }
+  .p-singular-work__content-text {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 58.75rem) {
+  .p-singular-fv__inner {
+    margin-top: 10rem;
+    padding: 3rem 5rem;
+  }
+  .p-singular-fv__title {
+    font-size: 3.2rem;
+  }
+  .p-singular-work__img-box {
+    margin: 0 auto 10rem;
+  }
+  .p-singular-work__title {
+    font-size: 3.2rem;
+  }
+  .p-singular-work__content-link {
+    font-size: 2.2rem;
+  }
+  .p-singular-work__content-password {
+    font-size: 2rem;
+  }
+  .p-singular-work__content-title {
+    font-size: 2.4rem;
+  }
+  .p-singular-work__content-text {
+    font-size: 2.2rem;
+  }
+}
+/*# sourceMappingURL=_singular.css.map */

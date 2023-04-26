@@ -1,0 +1,75 @@
+@use '../../foundation/color' as *;
+
+.c-form{
+    &__label{
+        display: flex;
+        gap: .3125em;
+        margin-top: 2em;
+    }
+    &__required{
+        color: $red;
+        font-size: 2rem;
+    }
+    &__input,
+    &__textarea{
+        width: 100%;
+        background-color: $blue;
+        padding: 1em 20px;
+        border-radius: 10px;
+        margin-top: -2rem;
+    }
+    &__btn{
+        padding: 1em 0;
+        width: 80%;
+        margin: 3.125em auto 0;
+        color: $white;
+        background-color: $black;
+        border-radius: 1rem;
+    }
+}
+// Contact Form 7 で自動的につくCSS
+// エラー文
+.wpcf7-not-valid-tip{
+    margin-top: 1rem;
+}
+// よくわからないやつ　送信ボタンの下にある
+.wpcf7-spinner{
+    display: none;
+}
+
+@media(min-width: 37.5rem){
+    .c-form{
+        &__label{
+            font-size: 2rem;
+        }
+        &__required{
+            font-size: 2.5rem;
+        }
+        &__input{
+            font-size: 1.8rem;
+            letter-spacing: .05em;
+            width: 80%;
+        }
+        &__btn{
+            font-size: 2rem;
+            width: 60%;
+        }
+    }
+}
+@media(min-width: 58.75rem){
+    .c-form{
+        &__label{
+            font-size: 2.4rem;
+            margin-top: 2.3em;
+        }
+        &__input,
+        &__textarea{
+            font-size: 2rem;
+            margin-top: -1.5rem;
+        }
+        &__btn{
+            margin-top: 8em;
+            width: 50%;
+        }
+    }
+}

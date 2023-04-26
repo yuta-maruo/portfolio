@@ -1,0 +1,15 @@
+@use '../../foundation/color' as *;
+
+.c-logo{
+    &__img{
+        width: 15rem;
+        height: auto;
+    }
+}
+@media(min-width: 58.75rem){
+    .c-logo{
+        &__img{
+            width: 22rem;
+        }
+    }
+}

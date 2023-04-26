@@ -1,0 +1,17 @@
+@use '../foundation/color' as *;
+
+.l-footer{
+    background-color: $black;
+    &__inner{
+        color: $white;
+        padding: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__copyright{
+        font-size: 1.2rem;
+        color: $white;
+    }
+}

@@ -1,0 +1,74 @@
+.c-btn {
+  display: flex;
+  justify-content: center;
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.c-btn-see {
+  padding: 1em 0;
+  width: 80%;
+  color: #fff;
+  background-color: #333;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+.c-btn-see__over-color {
+  position: relative;
+}
+.c-btn-see:hover {
+  color: #333;
+}
+.c-btn-see::before {
+  content: "";
+  background-color: #08ceff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  transform: translateX(-95%);
+}
+.c-btn-see:hover::before {
+  transform: translateX(0%);
+}
+.c-btn-see::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 2rem;
+  margin: auto;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  transition: all 0.5s ease-in-out;
+  transform: rotate(45deg);
+}
+.c-btn-see:hover::after {
+  border-top: 1px solid #333;
+  border-right: 1px solid #333;
+}
+
+@media (min-width: 37.5rem) {
+  .c-btn {
+    font-size: 1.8rem;
+  }
+  .c-btn-see {
+    width: 60%;
+  }
+}
+@media (min-width: 58.75rem) {
+  .c-btn {
+    font-size: 2.2rem;
+  }
+  .c-btn-see {
+    padding: 0.8em 0;
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=_btn.css.map */

@@ -1,0 +1,143 @@
+@mixin fv-title(
+    $name,
+    $duration: 3s,
+    $fill-mode: forwards,
+    $timing-function: ease-out,
+){
+    animation: {
+        name: $name;
+        duration: $duration;
+        fill-mode: $fill-mode;
+        timing-function: $timing-function;
+    }
+}
+@-webkit-keyframes fv__name{
+    0%{
+        opacity: 0;
+        transform: translate(-50%, 100%);
+    }
+    50%{
+        opacity: 0;
+        transform: translate(-50% , 0%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-50%, -100%);
+    }
+}
+@keyframes fv__name{
+    0%{
+        opacity: 0;
+        transform: translate(-50%, 100%);
+    }
+    50%{
+        opacity: 0;
+        transform: translate(-50% , 0%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-50%, -100%);
+    }
+}
+@-webkit-keyframes fv__portfolio{
+    0%{
+        opacity: 0;
+        transform: translate(-50%, 100%);
+    }
+    50%{
+        opacity: 0;
+        transform: translate(-50% , 50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-50%, 0%);
+    }
+}
+@keyframes fv__portfolio{
+    0%{
+        opacity: 0;
+        transform: translate(-50%, 100%);
+    }
+    50%{
+        opacity: 0;
+        transform: translate(-50% , 50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-50%, 0%);
+    }
+}
+
+@mixin fv-scroll(
+    $name,
+    $duration: 3s,
+    $timing-function: ease-out,
+    $iteration-count: infinite
+){
+    animation: {
+        name: $name;
+        duration: $duration;
+        timing-function: $timing-function;
+        iteration-count: $iteration-count;
+    }
+}
+@-webkit-keyframes fv-arrow{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+        transform: translateY(3rem);
+    }
+    67%{
+        opacity: 1;
+        transform: translateY(4rem);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(5.5rem) scale3d(.5, .5, .5);
+    }
+}
+@keyframes fv-arrow{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+        transform: translateY(3rem);
+    }
+    67%{
+        opacity: 1;
+        transform: translateY(4rem);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(5.5rem) scale3d(.5, .5, .5);
+    }
+}
+
+@mixin fv-text(
+    $name,
+    $delay: 2s,
+    $timing-function: linear,
+    $direction: alternate,
+    $iteration-count: infinite
+){
+    animation: {
+        name: $name;
+        delay: $delay;
+        timing-function: $timing-function;
+        direction: $direction;
+        iteration-count: $iteration-count;
+    }
+}
+@-webkit-keyframes fv-scroll-text{
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fv-scroll-text{
+    to{
+        opacity: 1;
+    }
+}
